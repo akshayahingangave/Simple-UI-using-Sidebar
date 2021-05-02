@@ -1,0 +1,59 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" id="sidebar">
+            <nav id="sidebar">
+
+                <!-- <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a> -->
+                <ul class="list-unstyled components mb-5"><br>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/physician">General Pysician</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/child">Child Specialist</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/paedietric">Paediatrics</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/gynac">Gynacology</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/dermato">Dermatology</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/cardio">Cardiology</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/neuro">Neurology</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/ent">ENT Specialist</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/dentist">Dentist</a>
+                    </li>
+
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/nephro">Nephrology</a>
+                    </li>
+                    <li style="border-bottom: 1px solid gray;">
+                        <a class="nav-link" routerLink="/ortho">Orthopaedic</a>
+                    </li>
+
+                    <li>
+                        <a class="nav-link" routerLink="/psycho">Psychology</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <!-- Page Content  -->
+        <div id="content" class="col-md-10">
+            <div>
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+
+    </div>
+</div>

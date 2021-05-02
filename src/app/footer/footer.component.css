@@ -1,0 +1,16 @@
+h2{
+    padding-top: 30px;
+    color: rgb(204, 113, 28);
+    font-weight: bold;
+    text-align: center;
+}
+div{
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: bold;
+}
+.footer{
+    background-color: #82ac82;
+    text-align: center;
+}

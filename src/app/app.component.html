@@ -1,0 +1,48 @@
+<!-- <div  style="background-image: url(assets/images/background.jpg);
+height: auto;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;"> -->
+<p *ngFor="let alert of alerts" style="font-size: 14px; text-align: center;">
+  <ngb-alert [type]="alert.type" (closed)="close(alert)">{{ alert.message }}</ngb-alert>
+</p>
+
+<nav class="navbar navbar-expand-lg navbar-light " id="nav1">
+  <a class="navbar-brand" href="#">New Life
+    Care</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link" routerLink="/" style="color: black;">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about" style="color: black;">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/faqs" style="color: black;">FAQ's</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/gallary" style="color: black;">Gallary</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/contact" style="color: black;">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/covid" style="color: red;">COVID19</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+
+<app-sidebar></app-sidebar>
+
+<app-footer></app-footer>
+
+<!-- </div> -->

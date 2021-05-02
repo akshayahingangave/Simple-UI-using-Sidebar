@@ -1,0 +1,110 @@
+<h1>Nephrology Department
+
+</h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+            <h3>Patient Details</h3>
+            <form>
+                <div class="form-group" style="width: 30%;">
+                    <label>Patient type</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>----Select----</option>
+                        <option>Old Patient</option>
+                        <option>New Patient</option>
+                    </select>
+                </div>
+                <div class="row">
+                    <div class="col" style="width: 30%;">
+                        <label>Patient Name</label>
+                        <input type="text" class="form-control" placeholder="name">
+                    </div>
+                    <div class="col" style="width: 30%;">
+                        <label>Mobile Number</label>
+                        <input type="text" class="form-control" placeholder="Mobile Number">
+                    </div>
+                </div>
+            </form>
+            <br>
+            <h3>Your Doctor</h3>
+            <form>
+                <div class="form-group" style="width: 30%;">
+                    <label for="exampleFormControlSelect1">select your Doctor</label>
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <option>----Select----</option>
+                        <option>Dr. Patil</option>
+                        <option>Dr. Shah</option>
+                        <option>Dr. Mone</option>
+                        <option>Dr. singh</option>
+                    </select>
+                </div>
+            </form>
+            <br>
+
+            <h3>Appointment</h3>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <form class="form-inline">
+                            <div class="form-group">
+                                <div class="input-group">
+                                    <input class="form-control" placeholder="yyyy-mm-dd" name="dp" [(ngModel)]="model"
+                                        ngbDatepicker #d="ngbDatepicker">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary calendar" (click)="d.toggle()"
+                                            type="button"></button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-6">
+                        <ngb-timepicker [(ngModel)]="time" [meridian]="meridian"></ngb-timepicker>
+                        <button class="btn btn-sm btn-outline-{{meridian ? 'success' : 'danger'}}"
+                            (click)="toggleMeridian()">
+                            Meridian - {{meridian ? "ON" : "OFF"}}
+                        </button>
+                        <!-- <pre>Selected time: {{time | json}}</pre> -->
+                    </div>
+
+                </div>
+            </div>
+            <br>
+            <button (click)="showAlert()" class="registerbtn" style="border: 1px solid green; border-radius: 10px; color: green; padding-top: 5px; padding-bottom: 5px;
+    background-color: white; align-self: center; width: 10%; font-weight: bold;">
+                Submit</button>
+        </div>
+        <div class="col-md-4">
+            <p style="font-weight: bold;">When to see a nephrologist</p>
+            <p>
+                A family or emergency doctor may refer anyone with signs or symptoms of chronic, moderate, or severe kidney dysfunction to a nephrologist. They will usually refer babies born with kidney dysfunction to a nephrologist immediately.
+
+                Some common signs and symptoms of severe kidney problems include:
+            </p>
+            <ul>
+                <li>swelling, often in the legs, ankles, or feet</li>
+                <li>itchiness</li>
+                <li>reduced sense of taste and appetite</li>
+                <li>unintentional weight loss</li>
+                <li>unexplained confusion, memory problems, or trouble focusing</li>
+                <li>pain, fluid in the joints, or stiffness</li>
+            </ul>
+            <hr>
+            <h4 style="font-weight: bold;">Review</h4>
+            <ngb-toast *ngIf="show" header="Click my close icon →" [autohide]="false" (hidden)="close()">
+                <p style="font-weight: bold;">Divya</p>
+                <p>The staff and doctor was very helpful. Dr. answered my questions with simple and straight ro
+                    the point answers</p>
+                <hr>
+                <p style="font-weight: bold;">Mr. Kulkarni</p>
+                <p>Excellent care and professional, thorough exams</p>
+                <hr>
+                <p style="font-weight: bold;">Mrs. Singhania</p>
+                <p>Doctor was very informative. seems to care about the patient.</p>
+                <hr>
+            </ngb-toast>
+            <p *ngIf="!show">I'll be back!</p>
+        </div>
+    </div>
+</div>
